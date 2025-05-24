@@ -1,0 +1,33 @@
+{
+  "name": "pustak-plugin-weight-tracker",
+  "version": "1.0.0",
+  "description": "Weight Tracker plugin for Pustak",
+  "main": "index.js",
+  "author": "Ayush Pahwa",
+  "clientEntry": "dist/client/index.mjs",
+  "scripts": {
+    "build:server": "tsc -p tsconfig.server.json --outDir dist/server",
+    "build:client": "vite build --config vite.config.plugin.ts",
+    "build": "yarn build:server && yarn build:client"
+  },
+  "dependencies": {
+    "koa-router": "^12.0.1",
+    "lucide-react": "^0.511.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "peerDependencies": {
+    "lucide-react": ">=0.245.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/koa-router": "^7.4.8",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.3.0"
+  },
+  "license": "MIT"
+}

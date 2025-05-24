@@ -1,0 +1,10 @@
+{
+  "name": "weight-tracker",
+  "version": "1.0.0",
+  "serverEntry": "dist/server/index.js",
+  "clientEntry": "dist/client/index.mjs",
+  "hooks": ["firstTimeSetup", "init", "onFocus"],
+  "migrations": {
+    "1.0.0": "./migrations/1.0.0.sql"
+  }
+}
