@@ -10,3 +10,11 @@ export function registerRoutes(ctx: PluginContext) {
     sendSuccess(ctx, "Hello World");
   });
 }
+
+export function onUserEnable(ctx: PluginContext) {
+  console.log("From weight-tracker, onUserEnable success");
+}
+
+export function onUserDisable(ctx: PluginContext) {
+  console.log("From weight-tracker, onUserDisable success");
+}
