@@ -1,16 +1,12 @@
-import Router from "koa-router";
 import { PluginContext } from "./PluginContext";
+import { sendSuccess } from "./response";
 
 export async function firstTimeSetup(ctx: PluginContext) {
-  console.log("firstTimeSetup");
+  console.log("From weight-tracker, firstTimeSetup success");
 }
 
 export function registerRoutes(ctx: PluginContext) {
-  const router = new Router();
-  router.get("/", (ctx) => {
-    ctx.body = "Hello World";
+  ctx.router.get("/hello", (ctx) => {
+    sendSuccess(ctx, "Hello World");
   });
-  ctx.use(router.routes());
-  ctx.use(router.allowedMethods());
-  return router;
 }
