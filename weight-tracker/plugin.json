@@ -1,5 +1,6 @@
 {
   "name": "weight-tracker",
+  "description": "Weight Tracker plugin for Pustak",
   "version": "1.0.0",
   "serverEntry": "dist/server/index.js",
   "clientEntry": "dist/client/index.mjs",
