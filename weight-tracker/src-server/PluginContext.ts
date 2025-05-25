@@ -1,4 +1,7 @@
+import Koa from "koa";
+import Router from "koa-router";
+
 export interface PluginContext {
-  use: (middleware: any) => void;
-  body: any;
+  app: Koa;
+  router: Router;
 }
